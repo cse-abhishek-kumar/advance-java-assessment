@@ -14,12 +14,12 @@ public class App {
 
         System.out.println("\n---- Getting localStorage bean first time ----");
         StorageService local1 =
-                (StorageService) context.getBean("localStorage");
+                context.getBean("localStorage", StorageService.class);
         local1.storeFile("localFile1.txt");
 
         System.out.println("\n---- Getting localStorage bean second time ----");
         StorageService local2 =
-                (StorageService) context.getBean("localStorage");
+                context.getBean("localStorage", StorageService.class);
         local2.storeFile("localFile2.txt");
 
         context.close();
