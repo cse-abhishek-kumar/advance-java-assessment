@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: movie-service
+logging:
+  level:
+    com.moviebooking: DEBUG
+management:
+  tracing:
+    sampling:
+      probability: 1.0
